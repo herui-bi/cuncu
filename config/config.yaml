@@ -1,0 +1,43 @@
+# ===== 运行环境 =====
+# 默认项目，可在命令行用 --env 或环境变量 TEST_ENV 覆盖
+# 每个项目的测试地址按目录维护：config/environments/<项目>/<阶段>.yaml
+# 阶段默认 test，可用环境变量 TEST_STAGE 切换（如 prod）
+env: dongying
+
+# ===== 登录配置 =====
+auth:
+  # 开启后自动复用 auth/storage_state.json 中的登录态（内网系统推荐）
+  enabled: false
+  storage_state: "auth/storage_state.json"
+  login_path: "/"
+  # 支持 ${环境变量:-默认值}，可通过 .env 覆盖，避免账号硬编码进仓库
+  username: "${LOGIN_USER:-standard_user}"
+  password: "${LOGIN_PASSWORD:-secret_sauce}"
+  # 保存登录态脚本使用的元素定位（内网系统按实际页面修改）
+  selectors:
+    username: "#user-name"
+    password: "#password"
+    submit: "#login-button"
+
+# ===== 浏览器配置 =====
+browser:
+  # 默认打开浏览器窗口，CI 通过环境变量 HEADLESS=true 切回无头
+  headless: "${HEADLESS:-false}"
+  slow_mo: 0
+  ignore_https_errors: true
+  locale: "zh-CN"
+  # 投保页为 H5 页面，使用手机视口
+  is_mobile: true
+  viewport:
+    width: 390
+    height: 844
+
+# ===== 超时配置（毫秒）=====
+timeouts:
+  default_ms: 15000
+  navigation_ms: 30000
+
+# ===== Excel 数据驱动 =====
+excel:
+  # 默认数据文件；项目隔离后各项目数据放 data/<项目>/caseData.xlsx，用例中显式传入
+  path: "data/dongying/caseData.xlsx"

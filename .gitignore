@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+logs/
+reports/
+test-results/
+auth/
+tools/
+debug.log
+data/verified_identities.csv
+scripts/_probe_*.py

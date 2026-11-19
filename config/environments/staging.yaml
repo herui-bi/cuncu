@@ -1,0 +1,2 @@
+# 预发环境地址
+base_url: "${STAGING_BASE_URL}"

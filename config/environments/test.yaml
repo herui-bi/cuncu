@@ -1,0 +1,11 @@
+# 测试环境地址（示例站点，接入内网后替换为真实地址）
+base_url: "https://test-insure.meditrustbroker.com/dyhmbv2h5/?code=dyhmbv2_test#/index"
+
+# 测试库连接信息（账号密码放 .env，不提交仓库）
+db:
+  host: "${DB_HOST:-rm-uf637ba0514898t3sko.mysql.rds.aliyuncs.com}"
+  port: "${DB_PORT:-3306}"
+  user: "${DB_USER:-insure_devloper}"
+  password: "${DB_PASSWORD:-}"
+  database: "${DB_NAME:-mth_insure_core}"
+  charset: "utf8mb4"

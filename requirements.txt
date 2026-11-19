@@ -1,0 +1,11 @@
+# 测试框架核心依赖（Python 3.12）
+pytest>=8.3,<9
+pytest-playwright>=0.6,<1
+playwright>=1.49,<2
+pytest-xdist>=3.6,<4
+pytest-rerunfailures>=15,<16
+allure-pytest>=2.13,<3
+openpyxl>=3.1,<4
+pyyaml>=6.0,<7
+python-dotenv>=1.0,<2
+pymysql>=1.1,<2

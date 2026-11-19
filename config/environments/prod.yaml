@@ -1,0 +1,2 @@
+# 生产环境地址
+base_url: "${PROD_BASE_URL}"

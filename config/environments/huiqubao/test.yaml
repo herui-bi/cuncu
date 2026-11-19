@@ -1,0 +1,12 @@
+# 惠衢保 2027 · 测试环境
+# 入口地址（H5）：惠衢保 7.0 订单中心（订单升级 / 我的订单 / 收银台）
+base_url: "https://test-insure.meditrustbroker.com/hqb7h5/?code=hqb7_test#/index"
+
+# 测试库连接信息（账号密码放 .env，不提交仓库）
+db:
+  host: "${DB_HOST:-rm-uf637ba0514898t3sko.mysql.rds.aliyuncs.com}"
+  port: "${DB_PORT:-3306}"
+  user: "${DB_USER:-insure_devloper}"
+  password: "${DB_PASSWORD:-}"
+  database: "${DB_NAME:-mth_insure_core}"
+  charset: "utf8mb4"
